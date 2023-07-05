@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/app_menu_feeback"
+        android:onClick="feeback"
+        android:title="@string/send_feedback" />
+
+    <item
+        android:id="@+id/app_menu_help"
+        android:onClick="help"
+        android:title="@string/help" />
+
+    <!-- <item
+         android:id="@+id/app_menu_settings_button"
+         android:title="@string/app_menu_settings"
+         android:onClick="openSettings"
+         />
+
+     <item
+         android:id="@+id/app_menu_about_button"
+         android:title="@string/app_menu_about"
+         android:onClick="openAbout"
+         />-->
+</menu>

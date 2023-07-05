@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name="com.google.androidcalculator.OpenCalcApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_calculator"
+        android:label="@string/app_name_display"
+        android:roundIcon="@drawable/ic_launcher_calculator"
+        android:localeConfig="@xml/locales_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.google.androidcalculator.scriptcodeUI.AllCodesActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name="com.google.androidcalculator.scriptcodeUI.ScriptDialogsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.androidcalculator.SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name="com.google.androidcalculator.AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.google.androidcalculator.MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <service
+            android:name="com.google.androidcalculator.MyTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_launcher_foreground_tile"
+            android:label="@string/app_name_display"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
